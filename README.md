@@ -16,3 +16,13 @@ Lihat **PANDUAN.md** (Google Sheets untuk RSVP, GitHub Pages untuk hosting, prev
 ## Foto di bingkai cover
 - Kiri = mempelai B (pria), kanan = mempelai A (wanita). Isi `fotoPria` dan `fotoWanita` di data, atau pilih langsung dari perangkat di `editor.html` (otomatis dikompres dan ditanam di data.js).
 - Teks cover (welcome / to our wedding / open invitation) bisa diubah di bagian `cover`.
+
+## Our Story
+- Diatur di `editor.html` tab **Our Story** (judul, cerita, foto, fokus foto per bab) atau langsung di `data.js` bagian `kisah`.
+- Antar bab dipisah garis panjang yang "tergambar" mengikuti scroll; teks menyala kata demi kata saat dibaca; foto berubah dari hitam-putih ke berwarna.
+
+## Optimasi yang sudah diterapkan
+- Foto galeri dikompres (maks 1400px, JPEG progresif). Foto cover/mempelai disimpan sebagai file di `assets/` (bukan base64) sehingga `data.js` ringan dan foto bisa di-cache browser.
+- Musik dikompres ke 96 kbps (~2,6 MB).
+- Font Google hanya dimuat sesuai pilihan di editor, bukan 8 keluarga sekaligus.
+- Catatan: memilih foto lewat editor akan menanam foto (base64) lagi di `data.js`. Untuk foto besar, lebih ringan simpan file di `assets/` lalu isi path-nya.
